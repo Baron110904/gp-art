@@ -1,6 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -97,5 +100,45 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .hover-image {
+    @apply relative overflow-hidden;
+  }
+  
+  .hover-image img {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  
+  .hover-image:hover img {
+    @apply scale-105 brightness-90;
+  }
+  
+  .hover-image .overlay {
+    @apply absolute inset-0 bg-black/0 opacity-0 transition-all duration-300 flex flex-col justify-end p-4;
+  }
+  
+  .hover-image:hover .overlay {
+    @apply bg-black/30 opacity-100;
+  }
+
+  .social-icon {
+    @apply h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 }
