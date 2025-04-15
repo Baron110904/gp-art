@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Instagram, Facebook, TikTok, MessageCircle } from 'lucide-react';
+import { Instagram, Facebook, MessageCircle, Music } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
     { id: 'instagram', Icon: Instagram, url: 'https://instagram.com/gp-art', label: 'Instagram' },
     { id: 'facebook', Icon: Facebook, url: 'https://facebook.com/gp-art', label: 'Facebook' },
-    { id: 'tiktok', Icon: TikTok, url: 'https://tiktok.com/@gp-art', label: 'TikTok' },
+    { id: 'tiktok', Icon: Music, url: 'https://tiktok.com/@gp-art', label: 'TikTok' },
     { id: 'whatsapp', Icon: MessageCircle, url: 'https://wa.me/33600000000', label: 'WhatsApp' },
   ];
 
