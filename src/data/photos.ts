@@ -24,7 +24,7 @@ export const photos: Photo[] = [
     id: '3',
     title: 'Cérémonie de mariage',
     description: 'Un moment émouvant lors d\'une cérémonie de mariage en plein air',
-    imageUrl: 'https://drive.google.com/file/d/1TfQ0ukIruOWo8R5ogShjxU0WWbBJ4_eL/view?usp=sharing',
+    imageUrl: 'https://i.imgur.com/uZwQEal.jpeg',
     category: 'Mariages',
     dateCreated: '2023-08-05',
     featured: true
@@ -41,7 +41,7 @@ export const photos: Photo[] = [
     id: '5',
     title: 'Portrait urbain',
     description: 'Portrait dans un environnement urbain avec des contrastes forts',
-    imageUrl: 'https://drive.google.com/file/d/1qw0Xf4lv5jY-IlwxJPPfdzKXnBfgaRmW/view?usp=sharing',
+    imageUrl: 'https://i.imgur.com/awC2cfy.jpeg',
     category: 'Portraits',
     dateCreated: '2023-10-03'
   },
@@ -49,7 +49,7 @@ export const photos: Photo[] = [
     id: '6',
     title: 'Faune sauvage',
     description: 'Cerf majestueux photographié dans son habitat naturel au lever du soleil',
-    imageUrl: 'https://drive.google.com/file/d/1eJKQnDMN5upo3o4VbXSaXqC7NstDGqeo/view?usp=sharing',
+    imageUrl: 'https://i.imgur.com/w8J9oPx.jpeg',
     category: 'Nature',
     dateCreated: '2023-11-20',
     featured: true
@@ -58,7 +58,7 @@ export const photos: Photo[] = [
     id: '7',
     title: 'Danse des mariés',
     description: 'Premier slow des mariés capturé dans une ambiance féérique',
-    imageUrl: 'https://drive.google.com/file/d/1oQdyIBvJIqemUVN2vNaWtJ4CooYTl1Ku/view?usp=sharing',
+    imageUrl: 'https://i.imgur.com/SsEMOEL.jpeg',
     category: 'Mariages',
     dateCreated: '2023-12-09'
   },
@@ -66,7 +66,7 @@ export const photos: Photo[] = [
     id: '8',
     title: 'Conférence annuelle',
     description: 'Moments clés de la conférence annuelle de l\'entreprise XYZ',
-    imageUrl: 'https://drive.google.com/file/d/1jSeV8d3KpXWSRgEyoqNFP8dd-bAbUXy_/view?usp=sharing',
+    imageUrl: 'https://i.imgur.com/RRFv7ct.jpeg',
     category: 'Événements',
     dateCreated: '2024-01-18'
   },
@@ -74,7 +74,7 @@ export const photos: Photo[] = [
     id: '9',
     title: 'Art conceptuel',
     description: 'Composition artistique jouant avec les formes et les textures',
-    imageUrl: 'https://drive.google.com/file/d/1fY3SoconhFf2ALV2yd1y9OMhtZNBJd2K/view?usp=sharing',
+    imageUrl: 'https://i.imgur.com/LRL6TfV.jpeg',
     category: 'Art',
     dateCreated: '2024-02-27',
     featured: true
@@ -87,7 +87,7 @@ export const galleries: GalleryData[] = [
     id: 'g1',
     title: 'Mariages',
     description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
-    coverImage: 'https://drive.google.com/file/d/1mxOM9Wrb7FJrCkbjy6NpUpOYYGcve9SR/view?usp=sharing',
+    coverImage: 'https://i.imgur.com/SsEMOEL.jpeg',
     category: 'Mariages',
     featured: true,
     photos: photos.filter(photo => photo.category === 'Mariages')
@@ -96,7 +96,7 @@ export const galleries: GalleryData[] = [
     id: 'g2',
     title: 'Portraits',
     description: 'Des portraits authentiques qui révèlent la personnalité unique de chacun',
-    coverImage: 'https://drive.google.com/file/d/1GFMC_54MWKwq5iQuyyZcQswlF_yOFpbd/view?usp=sharing',
+    coverImage: 'https://i.imgur.com/SAyPhfP.jpeg',
     category: 'Portraits',
     featured: true,
     photos: photos.filter(photo => photo.category === 'Portraits')
@@ -105,7 +105,7 @@ export const galleries: GalleryData[] = [
     id: 'g3',
     title: 'Nature',
     description: 'La beauté majestueuse de la nature capturée dans tous ses états',
-    coverImage: 'https://drive.google.com/file/d/1bvum-W5nML5XNzCK66FOnBzf66LMtY63/view?usp=sharing',
+    coverImage: 'https://i.imgur.com/8SzfkZB.jpeg',
     category: 'Nature',
     photos: photos.filter(photo => photo.category === 'Nature')
   },
@@ -113,7 +113,7 @@ export const galleries: GalleryData[] = [
     id: 'g4',
     title: 'Événements',
     description: 'Des événements professionnels ou festifs immortalisés avec soin',
-    coverImage: 'https://drive.google.com/file/d/1qw0Xf4lv5jY-IlwxJPPfdzKXnBfgaRmW/view?usp=sharing',
+    coverImage: 'https://i.imgur.com/bZYDEGY.jpeg',
     category: 'Événements',
     photos: photos.filter(photo => photo.category === 'Événements')
   },
@@ -121,7 +121,7 @@ export const galleries: GalleryData[] = [
     id: 'g5',
     title: 'Art',
     description: 'Compositions artistiques et créatives mettant en avant mon style unique',
-    coverImage: 'https://drive.google.com/file/d/16PCyKBk7Ke9GSB9DJr_K1bCLCIBSkp13/view?usp=sharing',
+    coverImage: 'https://i.imgur.com/ECQ0HOG.jpeg',
     category: 'Art',
     photos: photos.filter(photo => photo.category === 'Art')
   }
