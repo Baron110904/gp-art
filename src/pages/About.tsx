@@ -46,7 +46,7 @@ const About = () => {
             {/* Sidebar */}
             <div className="md:w-1/3 space-y-8 sticky top-24">
               <img 
-                src="https://i.imgur.com/MxsAu6g.jpeg" 
+                src="https://i.imgur.com/FDxiRea.jpeg" 
                 alt="GP Art - Photographe" 
                 className="w-full rounded-lg shadow-lg"
               />
