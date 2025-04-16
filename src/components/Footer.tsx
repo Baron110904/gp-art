@@ -4,10 +4,10 @@ import { Instagram, Facebook, MessageCircle, Music } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { id: 'instagram', Icon: Instagram, url: 'https://instagram.com/gp-art', label: 'Instagram' },
-    { id: 'facebook', Icon: Facebook, url: 'https://facebook.com/gp-art', label: 'Facebook' },
-    { id: 'tiktok', Icon: Music, url: 'https://tiktok.com/@gp-art', label: 'TikTok' },
-    { id: 'whatsapp', Icon: MessageCircle, url: 'https://wa.me/33600000000', label: 'WhatsApp' },
+    { id: 'instagram', Icon: Instagram, url: 'https://www.instagram.com/_g.p_art/', label: 'Instagram' },
+    { id: 'facebook', Icon: Facebook, url: 'https://www.facebook.com/search/top?q=gp%20art%20photographie&locale=fr_FR', label: 'Facebook' },
+    { id: 'tiktok', Icon: Music, url: 'https://www.tiktok.com/@g_p_art', label: 'TikTok' },
+    { id: 'whatsapp', Icon: MessageCircle, url: 'https://wa.me/22991905976', label: 'WhatsApp' },
   ];
 
   return (
