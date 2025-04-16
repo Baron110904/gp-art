@@ -63,7 +63,7 @@ const Index = () => {
             <div className="md:w-1/2 space-y-4">
               <h2 className="font-serif text-3xl font-medium">À propos de moi</h2>
               <p className="text-gray-700">
-                Photographe passionné basé à Paris, je me spécialise dans la photographie de mariage, 
+                Photographe passionné basé à Abomey-Calavi, je me spécialise dans la photographie de mariage, 
                 les portraits et la photographie de nature. Mon approche combine l'authenticité des moments 
                 spontanés avec une esthétique soignée et épurée.
               </p>
