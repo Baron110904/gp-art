@@ -54,9 +54,9 @@ const About = () => {
               <div>
                 <h3 className="font-serif text-2xl mb-4">Contact</h3>
                 <div className="space-y-2 text-gray-700">
-                  <p>Email: contact@gp-art.com</p>
-                  <p>Téléphone: +33 6 00 00 00 00</p>
-                  <p>Studio: 123 Rue de la Photographie, 75000 Paris</p>
+                  <p>Email: gprecieux8@gmail.com</p>
+                  <p>Téléphone: +229 0167821860</p>
+                  <p>Studio: GODOMEY TOGOUDO, Abomey-Calavi</p>
                 </div>
                 
                 <div className="mt-6">
@@ -75,19 +75,19 @@ const About = () => {
                 <h2 className="font-serif text-3xl mb-4">Mon histoire</h2>
                 <div className="prose max-w-none text-gray-700">
                   <p className="mb-4">
-                    Bonjour, je suis le photographe derrière GP Art. Ma passion pour la photographie a commencé il y a plus 
-                    de 10 ans, lorsque j'ai reçu mon premier appareil photo. Depuis, cette passion s'est transformée 
-                    en une véritable vocation.
+                    Bonjour je suis le photographe derrière GP ART VISUAL. Ma passion pour la Photographie a  
+                    commencé il y a trois ans lorsque j’ai reçu mon premier appareil photo. Depuis cette passion 
+                    s’est transformé en une véritable vocation.
                   </p>
                   <p className="mb-4">
-                    Après des études en arts visuels et plusieurs années d'expérience auprès de photographes 
-                    renommés, j'ai créé GP Art pour partager ma vision et offrir un service photographique 
+                    Après une formation en arts visuels et deux années d’expérience auprès de photographe,
+                    j’ai crée GP ART VISUEL pour partager ma vision et offrir un service photographique 
                     personnalisé et authentique.
                   </p>
                   <p>
-                    Basé à Paris, je me déplace partout en France et à l'international pour vos projets. 
-                    Ma philosophie est simple : créer des images intemporelles qui racontent une histoire et 
-                    capturent l'essence des moments précieux de votre vie.
+                    Basé à Abomey-Calavi, je me déplace partout au Bénin et à l’international pour vos projets. 
+                    Ma philosophie est simple: créer des images intemporelles qui racontent une histoire 
+                    et capture l’essence des moments précieux de votre vie.
                   </p>
                 </div>
               </div>
@@ -112,9 +112,9 @@ const About = () => {
                 <h2 className="font-serif text-3xl mb-4">Équipement</h2>
                 <div className="prose max-w-none text-gray-700">
                   <p>
-                    Je travaille avec du matériel professionnel haut de gamme et dispose toujours d'équipements 
-                    de secours pour garantir la réussite de votre projet. Mon expertise technique, combinée à ma 
-                    vision artistique, me permet de m'adapter à toutes les conditions de prise de vue.
+                    Je travaille avec du matériel professionnel de qualité pour assurer la réussite de votre projet. 
+                    Mon expertise technique combinée à la vision artistique me permet de m’adapter à toutes les 
+                    conditions de prise de vue.
                   </p>
                 </div>
               </div>
