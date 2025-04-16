@@ -22,7 +22,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://drive.google.com/file/d/1GFMC_54MWKwq5iQuyyZcQswlF_yOFpbd/view?usp=sharing" 
+            src="https://imgur.com/5gtXBIt" 
             alt="GP Art Photography"
             className="w-full h-full object-cover"
           />
