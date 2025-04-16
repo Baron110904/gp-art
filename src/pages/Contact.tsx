@@ -103,18 +103,18 @@ const Contact = () => {
                 <div className="space-y-4 text-gray-700">
                   <div>
                     <h3 className="font-medium text-black">Email</h3>
-                    <p>contact@gp-art.com</p>
+                    <p>gprecieux8@gmail.com</p>
                   </div>
                   
                   <div>
                     <h3 className="font-medium text-black">Téléphone</h3>
-                    <p>+33 6 00 00 00 00</p>
+                    <p>+229 0167821860</p>
                   </div>
                   
                   <div>
                     <h3 className="font-medium text-black">Studio</h3>
-                    <p>123 Rue de la Photographie</p>
-                    <p>75000 Paris</p>
+                    <p>GODOMEY TOGOUDO</p>
+                    <p>Abomey-Calavi</p>
                   </div>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const Contact = () => {
                 <div className="space-y-2 text-gray-700">
                   <div className="flex justify-between">
                     <span>Lundi - Vendredi:</span>
-                    <span>10:00 - 18:00</span>
+                    <span>Sur rendez-vous</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Samedi:</span>
@@ -132,7 +132,7 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between">
                     <span>Dimanche:</span>
-                    <span>Fermé</span>
+                    <span>Sur rendez-vous</span>
                   </div>
                 </div>
                 
@@ -149,7 +149,15 @@ const Contact = () => {
           
           {/* Map placeholder */}
           <div className="mt-12 bg-gray-200 rounded-lg overflow-hidden h-80 flex items-center justify-center">
-            <p className="text-gray-500">Carte Google Maps serait intégrée ici</p>
+            <iframe
+              src="https://maps.app.goo.gl/yuWNGzm3EpfMWKU56"
+              width="100%"
+              height="100%"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="border-0 w-full h-full">
+            </iframe>
           </div>
         </div>
       </section>
