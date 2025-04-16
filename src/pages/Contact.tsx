@@ -147,18 +147,6 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Map placeholder */}
-          <div className="mt-12 rounded-lg overflow-hidden h-80">
-            <iframe
-              src="https://maps.app.goo.gl/yuWNGzm3EpfMWKU56"
-              width="100%"
-              height="100%"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="border-0 w-full h-full">
-            </iframe>
-          </div>
         </div>
       </section>
 
