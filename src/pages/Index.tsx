@@ -55,7 +55,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2">
               <img 
-                src="https://drive.google.com/uc?export=view&id=1WdNiCBaD90cWD3Hs7-Ryx5B4RvVODHsQ" 
+                src="https://imgur.com/zgdvVdH" 
                 alt="Photographe" 
                 className="w-full h-auto rounded-lg shadow-lg"
               />
