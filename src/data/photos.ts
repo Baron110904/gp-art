@@ -124,6 +124,51 @@ export const galleries: GalleryData[] = [
     coverImage: 'https://i.imgur.com/ECQ0HOG.jpeg',
     category: 'Art',
     photos: photos.filter(photo => photo.category === 'Art')
+  },
+  {
+    id: 'g6',
+    title: 'Mariages',
+    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
+    coverImage: 'https://i.imgur.com/fvPs0pF.jpeg',
+    category: 'Mariages',
+    featured: true,
+    photos: photos.filter(photo => photo.category === 'Mariages')
+  },
+  {
+    id: 'g7',
+    title: 'Mariages',
+    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
+    coverImage: 'https://i.imgur.com/1nDVzLu.jpeg',
+    category: 'Mariages',
+    featured: true,
+    photos: photos.filter(photo => photo.category === 'Mariages')
+  },
+  {
+    id: 'g8',
+    title: 'Mariages',
+    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
+    coverImage: 'https://i.imgur.com/Xi3g5lH.jpeg',
+    category: 'Mariages',
+    featured: true,
+    photos: photos.filter(photo => photo.category === 'Mariages')
+  },
+  {
+    id: 'g9',
+    title: 'Mariages',
+    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
+    coverImage: 'https://i.imgur.com/ecfweYY.jpeg',
+    category: 'Mariages',
+    featured: true,
+    photos: photos.filter(photo => photo.category === 'Mariages')
+  },
+  {
+    id: 'g10',
+    title: 'Mariages',
+    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
+    coverImage: 'https://i.imgur.com/wsP5uPr.jpeg',
+    category: 'Mariages',
+    featured: true,
+    photos: photos.filter(photo => photo.category === 'Mariages')
   }
 ];
 
