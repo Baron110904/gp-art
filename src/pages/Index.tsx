@@ -22,7 +22,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://drive.google.com/file/d/1GFMC_54MWKwq5iQuyyZcQswlF_yOFpbd/view?usp=sharing" 
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" 
             alt="GP Art Photography"
             className="w-full h-full object-cover"
           />
@@ -55,7 +55,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2">
               <img 
-                src="https://drive.google.com/uc?export=view&id=1WdNiCBaD90cWD3Hs7-Ryx5B4RvVODHsQ" 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
                 alt="Photographe" 
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -63,7 +63,7 @@ const Index = () => {
             <div className="md:w-1/2 space-y-4">
               <h2 className="font-serif text-3xl font-medium">À propos de moi</h2>
               <p className="text-gray-700">
-                Photographe passionné basé à Abomey-Calavi, je me spécialise dans la photographie de mariage, 
+                Photographe passionné basé à Paris, je me spécialise dans la photographie de mariage, 
                 les portraits et la photographie de nature. Mon approche combine l'authenticité des moments 
                 spontanés avec une esthétique soignée et épurée.
               </p>
