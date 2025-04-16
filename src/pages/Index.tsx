@@ -22,7 +22,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" 
+            src="https://drive.google.com/file/d/1GFMC_54MWKwq5iQuyyZcQswlF_yOFpbd/view?usp=sharing" 
             alt="GP Art Photography"
             className="w-full h-full object-cover"
           />
@@ -55,7 +55,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                src="https://drive.google.com/file/d/1WdNiCBaD90cWD3Hs7-Ryx5B4RvVODHsQ/view?usp=sharing" 
                 alt="Photographe" 
                 className="w-full h-auto rounded-lg shadow-lg"
               />
