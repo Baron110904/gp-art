@@ -48,8 +48,8 @@ export const photos: Photo[] = [
   },
   {
     id: '7',
-    title: 'La demande',
-    description: 'Premier slow des mariés capturé dans une ambiance féérique',
+    title: 'Fashion',
+    description: 'Premier shoot de la mariée',
     imageUrl: 'https://i.imgur.com/SsEMOEL.jpeg',
     category: 'Mariages',
     dateCreated: '2023-12-09'
