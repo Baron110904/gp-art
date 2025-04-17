@@ -13,17 +13,9 @@ export const photos: Photo[] = [
     featured: true
   },
   {
-    id: '2',
-    title: 'Portrait dans la forêt',
-    description: 'Portrait naturel avec un éclairage tamisé dans une forêt dense',
-    imageUrl: 'https://images.unsplash.com/photo-1485833077593-4278bba3f11f',
-    category: 'Portraits',
-    dateCreated: '2023-07-22'
-  },
-  {
     id: '3',
-    title: 'Cérémonie de mariage',
-    description: 'Un moment émouvant lors d\'une cérémonie de mariage en plein air',
+    title: 'La demande',
+    description: 'Un moment émouvant',
     imageUrl: 'https://i.imgur.com/uZwQEal.jpeg',
     category: 'Mariages',
     dateCreated: '2023-08-05',
@@ -39,7 +31,7 @@ export const photos: Photo[] = [
   },
   {
     id: '5',
-    title: 'Portrait urbain',
+    title: 'Portrait personnel',
     description: 'Portrait dans un environnement urbain avec des contrastes forts',
     imageUrl: 'https://i.imgur.com/awC2cfy.jpeg',
     category: 'Portraits',
@@ -56,7 +48,7 @@ export const photos: Photo[] = [
   },
   {
     id: '7',
-    title: 'Danse des mariés',
+    title: 'La demande',
     description: 'Premier slow des mariés capturé dans une ambiance féérique',
     imageUrl: 'https://i.imgur.com/SsEMOEL.jpeg',
     category: 'Mariages',
