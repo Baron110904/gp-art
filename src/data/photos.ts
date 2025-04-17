@@ -78,7 +78,151 @@ export const photos: Photo[] = [
     category: 'Art',
     dateCreated: '2024-02-27',
     featured: true
-  }
+  },
+  {
+    id: '10',
+    title: 'Remise de diplome',
+    description: 'Soutenance de doctorat',
+    imageUrl: 'https://i.imgur.com/FTNpbLr.jpeg',
+    category: 'Événements',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '11',
+    title: 'Remise de diplome',
+    description: 'Soutenance de doctorat',
+    imageUrl: 'https://i.imgur.com/EcQTO2o.jpeg',
+    category: 'Événements',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '12',
+    title: 'Photo de mariage',
+    description: 'Prise de la mariée au balcon',
+    imageUrl: 'https://i.imgur.com/fvPs0pF.jpeg',
+    category: 'Mariages',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '13',
+    title: 'Anniversaire',
+    description: 'Jour de la PDG de Croch Byus',
+    imageUrl: 'https://i.imgur.com/yrdnSup.jpeg',
+    category: 'Événements',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '14',
+    title: 'Portrait personnel',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/884g362.jpeg',
+    category: 'Portraits',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '15',
+    title: 'Portrait d\'anniversaire',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/BBsPfmp.jpeg',
+    category: 'Événements',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '16',
+    title: 'Portrait d\'anniversaire',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/DVnhfLA.jpeg',
+    category: 'Événements',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '17',
+    title: 'Portrait personnel',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/9DGYxKz.jpeg',
+    category: 'Portraits',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '18',
+    title: 'Grand regard',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/1nDVzLu.jpeg',
+    category: 'Mariages',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '19',
+    title: 'Le bouquet',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/Xi3g5lH.jpeg',
+    category: 'Mariages',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '20',
+    title: 'La dot',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/ecfweYY.jpeg',
+    category: 'Mariages',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '21',
+    title: 'Portrait personnel',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/vWpWrut.jpeg',
+    category: 'Portraits',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '22',
+    title: 'Portrait personnel',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/PX8GcWx.jpeg',
+    category: 'Portraits',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '23',
+    title: 'Anniversaire',
+    description: 'La première bougie de Enaya',
+    imageUrl: 'https://i.imgur.com/NuxrHek.jpeg',
+    category: 'Événements',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '24',
+    title: 'Le couple ...',
+    description: '...',
+    imageUrl: 'https://i.imgur.com/wsP5uPr.jpeg',
+    category: 'Mariages',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
+  {
+    id: '25',
+    title: 'Portrait personnel',
+    description: 'La belle Gerv...',
+    imageUrl: 'https://i.imgur.com/DdCQzqx.jpeg',
+    category: 'Portraits',
+    dateCreated: '2024-02-27',
+    featured: true
+  },
 ];
 
 // Galeries
@@ -133,151 +277,7 @@ export const galleries: GalleryData[] = [
     category: 'Mariages',
     featured: true,
     photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g7',
-    title: 'Mariages',
-    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
-    coverImage: 'https://i.imgur.com/1nDVzLu.jpeg',
-    category: 'Mariages',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g8',
-    title: 'Mariages',
-    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
-    coverImage: 'https://i.imgur.com/Xi3g5lH.jpeg',
-    category: 'Mariages',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g9',
-    title: 'Mariages',
-    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
-    coverImage: 'https://i.imgur.com/ecfweYY.jpeg',
-    category: 'Mariages',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g10',
-    title: 'Mariages',
-    description: 'Capturer les moments d\'émotion et d\'amour lors de votre journée spéciale',
-    coverImage: 'https://i.imgur.com/wsP5uPr.jpeg',
-    category: 'Mariages',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g11',
-    title: 'Art',
-    description: 'Compositions artistiques et créatives mettant en avant mon style unique',
-    coverImage: 'https://i.imgur.com/LRL6TfV.jpeg',
-    category: 'Art',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g12',
-    title: 'Portraits',
-    description: 'Des portraits authentiques qui révèlent la personnalité unique de chacun',
-    coverImage: 'https://i.imgur.com/w8J9oPx.jpeg',
-    category: 'Portraits',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g13',
-    title: 'Événements',
-    description: 'Des événements professionnels ou festifs immortalisés avec soin',
-    coverImage: 'https://i.imgur.com/FTNpbLr.jpeg',
-    category: 'Événements',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g14',
-    title: 'Événements',
-    description: 'Des événements professionnels ou festifs immortalisés avec soin',
-    coverImage: 'https://i.imgur.com/w8J9oPx.jpeg',
-    category: 'Événements',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g15',
-    title: 'Événements',
-    description: 'Des événements professionnels ou festifs immortalisés avec soin',
-    coverImage: 'https://i.imgur.com/yrdnSup.jpeg',
-    category: 'Événements',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g16',
-    title: 'Portraits',
-    description: 'Des portraits authentiques qui révèlent la personnalité unique de chacun',
-    coverImage: 'https://i.imgur.com/884g362.jpeg',
-    category: 'Portraits',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g17',
-    title: 'Événements',
-    description: 'Des événements professionnels ou festifs immortalisés avec soin',
-    coverImage: 'https://i.imgur.com/BBsPfmp.jpeg',
-    category: 'Événements',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g18',
-    title: 'Événements',
-    description: 'Des événements professionnels ou festifs immortalisés avec soin',
-    coverImage: 'https://i.imgur.com/DVnhfLA.jpeg',
-    category: 'Événements',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g19',
-    title: 'Portraits',
-    description: 'Des portraits authentiques qui révèlent la personnalité unique de chacun',
-    coverImage: 'https://i.imgur.com/9DGYxKz.jpeg',
-    category: 'Portraits',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g20',
-    title: 'Portraits',
-    description: 'Des portraits authentiques qui révèlent la personnalité unique de chacun',
-    coverImage: 'https://i.imgur.com/vWpWrut.jpeg',
-    category: 'Portraits',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g21',
-    title: 'Portraits',
-    description: 'Des portraits authentiques qui révèlent la personnalité unique de chacun',
-    coverImage: 'https://i.imgur.com/PX8GcWx.jpeg',
-    category: 'Portraits',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
-  {
-    id: 'g22',
-    title: 'Événements',
-    description: 'Des événements professionnels ou festifs immortalisés avec soin',
-    coverImage: 'https://i.imgur.com/NuxrHek.jpeg',
-    category: 'Événements',
-    featured: true,
-    photos: photos.filter(photo => photo.category === 'Mariages')
-  },
+  }
 ];
 
 export const getPhotosByCategory = (category: PhotoCategory): Photo[] => {
