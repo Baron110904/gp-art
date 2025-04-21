@@ -4,8 +4,8 @@ import { createClient } from "@supabase/supabase-js";
 
 // Récupère l'URL et la clé publique Supabase de l'environnement
 // NOTE : Veuillez configurer correctement vos secrets Lovable Supabase.
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://kdpdwuiwmwuylgmyyiut.supabase.co';
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtkcGR3dWl3bXd1eWxnbXl5aXV0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUyMzE3ODksImV4cCI6MjA2MDgwNzc4OX0.GAqE0bGzN27o6D8ooxP227MlqWzFhmTGBTdQrEWHMbk';
 
 // Vérifier si les variables d'environnement sont définies
 if (!supabaseUrl || !supabaseKey) {
