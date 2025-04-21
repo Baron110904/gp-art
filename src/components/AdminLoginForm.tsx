@@ -12,10 +12,14 @@ const AdminLoginForm = () => {
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
+  // Ajout état pour gestion du flow "mot de passe oublié"
+  const [forgot, setForgot] = useState(false);
+  const [resetSubmitting, setResetSubmitting] = useState(false);
+  const [resetEmail, setResetEmail] = useState("");
+
+  // Formulaire de connexion classique
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Vérifier si Supabase est correctement configuré
     if (!supabase) {
       toast("Erreur de configuration", { 
         description: "La configuration de Supabase est incomplète. Veuillez configurer vos secrets Supabase.", 
@@ -23,14 +27,12 @@ const AdminLoginForm = () => {
       });
       return;
     }
-    
     setSubmitting(true);
     try {
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
-      
       if (error) {
         toast("Mauvais identifiants", { description: "Veuillez réessayer.", className: "bg-destructive text-destructive-foreground" });
       } else {
@@ -47,7 +49,34 @@ const AdminLoginForm = () => {
     }
   };
 
-  // Si Supabase n'est pas configuré, afficher une alerte plus visible
+  // Handler "mot de passe oublié"
+  const handleReset = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!supabase) {
+      toast("Erreur de configuration", { 
+        description: "La configuration de Supabase est incomplète. Veuillez configurer vos secrets Supabase.", 
+        className: "bg-destructive text-destructive-foreground" 
+      });
+      return;
+    }
+    setResetSubmitting(true);
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(resetEmail, {
+        redirectTo: window.location.origin + "/admin",
+      });
+      if (error) {
+        toast("Erreur", { description: "Impossible d'envoyer l'email de réinitialisation.", className: "bg-destructive text-destructive-foreground" });
+      } else {
+        toast("Email envoyé !", { description: "Consultez votre boîte mail pour réinitialiser votre mot de passe." });
+        setForgot(false);
+      }
+    } catch (err) {
+      toast("Erreur", { description: "Une erreur est survenue lors de la demande.", className: "bg-destructive text-destructive-foreground" });
+    } finally {
+      setResetSubmitting(false);
+    }
+  };
+
   if (!supabase) {
     return (
       <div className="bg-white max-w-md mx-auto mt-16 rounded-lg p-6 shadow-lg space-y-6">
@@ -68,6 +97,48 @@ const AdminLoginForm = () => {
           </div>
         </div>
       </div>
+    );
+  }
+
+  if (forgot) {
+    return (
+      <form
+        className="bg-white max-w-md mx-auto mt-16 rounded-lg p-6 shadow-lg space-y-6"
+        onSubmit={handleReset}
+      >
+        <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
+          <Lock className="w-5 h-5" /> Réinitialiser le mot de passe
+        </h2>
+        <div>
+          <Label htmlFor="reset-email">Adresse email</Label>
+          <div className="relative mt-1">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <User className="h-4 w-4 text-gray-400" />
+            </div>
+            <Input
+              id="reset-email"
+              type="email"
+              autoComplete="username"
+              placeholder="votre@email.com"
+              value={resetEmail}
+              onChange={(e) => setResetEmail(e.target.value)}
+              required
+              className="pl-10"
+            />
+          </div>
+        </div>
+        <Button className="w-full" type="submit" disabled={resetSubmitting}>
+          {resetSubmitting ? "Envoi en cours..." : "Envoyer le lien"}
+        </Button>
+        <Button
+          type="button"
+          variant="ghost"
+          className="w-full text-gray-500"
+          onClick={() => setForgot(false)}
+        >
+          Retour à la connexion
+        </Button>
+      </form>
     );
   }
 
@@ -113,8 +184,16 @@ const AdminLoginForm = () => {
       <Button className="w-full" type="submit" disabled={submitting}>
         {submitting ? "Connexion..." : "Se connecter"}
       </Button>
+      <button
+        type="button"
+        className="text-sm underline text-blue-600 mt-2 w-full"
+        onClick={() => setForgot(true)}
+      >
+        Mot de passe oublié ?
+      </button>
     </form>
   );
 };
 
 export default AdminLoginForm;
+
