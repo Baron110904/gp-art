@@ -16,13 +16,24 @@ if (!supabaseUrl || !supabaseKey) {
   );
 }
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+// Ne créer le client Supabase que si les URL et clés sont disponibles
+export const supabase = (supabaseUrl && supabaseKey) 
+  ? createClient(supabaseUrl, supabaseKey)
+  : null;
 
 export function useAuthSupabase() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    // Vérifier si le client Supabase est disponible
+    if (!supabase) {
+      setError("Configuration Supabase manquante");
+      setLoading(false);
+      return;
+    }
+
     const {
       data: { subscription }
     } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -34,10 +45,14 @@ export function useAuthSupabase() {
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
       setLoading(false);
+    }).catch(err => {
+      console.error("Erreur lors de la récupération de l'utilisateur:", err);
+      setError("Erreur lors de la récupération de l'utilisateur");
+      setLoading(false);
     });
 
-    return () => subscription.unsubscribe();
+    return () => subscription?.unsubscribe();
   }, []);
 
-  return { user, loading };
+  return { user, loading, error, isConfigured: !!supabase };
 }

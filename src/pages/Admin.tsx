@@ -13,7 +13,7 @@ import { useToast } from '@/components/ui/use-toast';
 import { X } from 'lucide-react';
 
 const Admin = () => {
-  const { user, loading } = useAuthSupabase();
+  const { user, loading, error, isConfigured } = useAuthSupabase();
   const { toast } = useToast();
   const [image, setImage] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -23,16 +23,13 @@ const Admin = () => {
     category: '' as PhotoCategory,
   });
 
-  // Simule le téléchargement d'une image
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
     setUploading(true);
     
-    // Simuler un délai de téléchargement
     setTimeout(() => {
-      // En réalité, nous utiliserions un service de stockage comme Supabase ou AWS S3
       const imageUrl = URL.createObjectURL(file);
       setImage(imageUrl);
       setUploading(false);
@@ -64,13 +61,11 @@ const Admin = () => {
       return;
     }
     
-    // En réalité, nous enverrions les données à une API
     toast({
       title: "Succès",
       description: "La photo a été ajoutée à votre galerie.",
     });
 
-    // Réinitialiser le formulaire
     setPhotoData({
       title: '',
       description: '',
@@ -80,7 +75,6 @@ const Admin = () => {
   };
 
   if (loading) {
-    // Affichage pendant le chargement
     return (
       <div className="min-h-screen flex flex-col justify-center items-center">
         <span className="animate-spin rounded-full border-4 border-gray-200 border-t-primary w-8 h-8 mb-3"></span>
@@ -89,8 +83,7 @@ const Admin = () => {
     );
   }
 
-  if (!user) {
-    // Si non connecté, affiche le formulaire de login
+  if (!isConfigured) {
     return (
       <div className="min-h-screen flex flex-col">
         <Navbar />
@@ -100,10 +93,16 @@ const Admin = () => {
     );
   }
 
-  // Si connecté : le code admin d’origine…
-  
+  if (!user) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <AdminLoginForm />
+        <Footer />
+      </div>
+    );
+  }
 
-  // Ajout d’un bouton de déconnexion dans l’admin (par exemple juste sous le header)
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -111,8 +110,10 @@ const Admin = () => {
         <form
           onSubmit={async (e) => {
             e.preventDefault();
-            await supabase.auth.signOut();
-            window.location.reload();
+            if (supabase) {
+              await supabase.auth.signOut();
+              window.location.reload();
+            }
           }}
         >
           <Button variant="outline" type="submit">
@@ -120,11 +121,10 @@ const Admin = () => {
           </Button>
         </form>
       </div>
-      {/* Main Content */}
+      
       <section className="py-12 px-4 flex-grow">
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-            {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <nav className="space-y-1">
@@ -150,14 +150,11 @@ const Admin = () => {
               </div>
             </div>
             
-            {/* Main Content */}
             <div className="lg:col-span-4">
-              {/* Upload Form */}
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h2 className="font-serif text-2xl mb-6">Ajouter une nouvelle photo</h2>
                 <form onSubmit={handleSubmit}>
                   <div className="space-y-6">
-                    {/* Image Upload */}
                     <div>
                       <Label htmlFor="image">Image</Label>
                       <div className="mt-2">
@@ -206,7 +203,6 @@ const Admin = () => {
                       </div>
                     </div>
                     
-                    {/* Title */}
                     <div>
                       <Label htmlFor="title">Titre *</Label>
                       <Input
@@ -218,7 +214,6 @@ const Admin = () => {
                       />
                     </div>
                     
-                    {/* Description */}
                     <div>
                       <Label htmlFor="description">Description</Label>
                       <Textarea
@@ -230,7 +225,6 @@ const Admin = () => {
                       />
                     </div>
                     
-                    {/* Category */}
                     <div>
                       <Label htmlFor="category">Catégorie *</Label>
                       <Select 

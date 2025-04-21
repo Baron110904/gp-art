@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/sonner";
-import { Lock, User } from "lucide-react";
+import { Lock, User, AlertCircle } from "lucide-react";
 
 const AdminLoginForm = () => {
   const [email, setEmail] = useState("");
@@ -16,27 +16,60 @@ const AdminLoginForm = () => {
     e.preventDefault();
     
     // Vérifier si Supabase est correctement configuré
-    if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
+    if (!supabase) {
       toast("Erreur de configuration", { 
-        description: "La configuration de Supabase est incomplète. Veuillez contacter l'administrateur.", 
+        description: "La configuration de Supabase est incomplète. Veuillez configurer vos secrets Supabase.", 
         className: "bg-destructive text-destructive-foreground" 
       });
       return;
     }
     
     setSubmitting(true);
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    setSubmitting(false);
-
-    if (error) {
-      toast("Mauvais identifiants", { description: "Veuillez réessayer.", className: "bg-destructive text-destructive-foreground" });
-    } else {
-      toast("Bienvenue !", { description: "Connexion réussie", className: "bg-green-500 text-white" });
+    try {
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      
+      if (error) {
+        toast("Mauvais identifiants", { description: "Veuillez réessayer.", className: "bg-destructive text-destructive-foreground" });
+      } else {
+        toast("Bienvenue !", { description: "Connexion réussie", className: "bg-green-500 text-white" });
+      }
+    } catch (err) {
+      toast("Erreur de connexion", { 
+        description: "Une erreur s'est produite lors de la tentative de connexion.", 
+        className: "bg-destructive text-destructive-foreground" 
+      });
+      console.error("Erreur de connexion:", err);
+    } finally {
+      setSubmitting(false);
     }
   };
+
+  // Si Supabase n'est pas configuré, afficher une alerte plus visible
+  if (!supabase) {
+    return (
+      <div className="bg-white max-w-md mx-auto mt-16 rounded-lg p-6 shadow-lg space-y-6">
+        <div className="p-4 border rounded-md bg-amber-50 border-amber-200 text-amber-800">
+          <div className="flex items-center mb-3">
+            <AlertCircle className="w-5 h-5 mr-2" />
+            <h3 className="font-semibold">Configuration requise</h3>
+          </div>
+          <p className="mb-3">
+            Vous devez configurer vos secrets Supabase pour utiliser l'espace administrateur.
+          </p>
+          <div className="text-sm">
+            <p>Veuillez ajouter ces variables dans les paramètres de Lovable:</p>
+            <ul className="list-disc pl-5 mt-1">
+              <li>VITE_SUPABASE_URL</li>
+              <li>VITE_SUPABASE_ANON_KEY</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <form
@@ -80,14 +113,6 @@ const AdminLoginForm = () => {
       <Button className="w-full" type="submit" disabled={submitting}>
         {submitting ? "Connexion..." : "Se connecter"}
       </Button>
-      
-      <div className="text-sm text-gray-500 pt-4 border-t border-gray-200">
-        <p>Veuillez configurer vos secrets Supabase dans les paramètres de Lovable:</p>
-        <ul className="list-disc pl-5 mt-1">
-          <li>VITE_SUPABASE_URL</li>
-          <li>VITE_SUPABASE_ANON_KEY</li>
-        </ul>
-      </div>
     </form>
   );
 };
