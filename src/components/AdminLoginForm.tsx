@@ -38,17 +38,21 @@ const AdminLoginForm = () => {
       </h2>
       <div>
         <Label htmlFor="email">Adresse email</Label>
-        <Input
-          id="email"
-          type="email"
-          autoComplete="username"
-          placeholder="photographe@email.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="mt-1"
-          leftIcon={<User className="w-4 h-4" />}
-        />
+        <div className="relative mt-1">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <User className="h-4 w-4 text-gray-400" />
+          </div>
+          <Input
+            id="email"
+            type="email"
+            autoComplete="username"
+            placeholder="photographe@email.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="pl-10"
+          />
+        </div>
       </div>
       <div>
         <Label htmlFor="password">Mot de passe</Label>
