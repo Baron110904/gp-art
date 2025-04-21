@@ -14,6 +14,16 @@ const AdminLoginForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Vérifier si Supabase est correctement configuré
+    if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
+      toast("Erreur de configuration", { 
+        description: "La configuration de Supabase est incomplète. Veuillez contacter l'administrateur.", 
+        className: "bg-destructive text-destructive-foreground" 
+      });
+      return;
+    }
+    
     setSubmitting(true);
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -70,6 +80,14 @@ const AdminLoginForm = () => {
       <Button className="w-full" type="submit" disabled={submitting}>
         {submitting ? "Connexion..." : "Se connecter"}
       </Button>
+      
+      <div className="text-sm text-gray-500 pt-4 border-t border-gray-200">
+        <p>Veuillez configurer vos secrets Supabase dans les paramètres de Lovable:</p>
+        <ul className="list-disc pl-5 mt-1">
+          <li>VITE_SUPABASE_URL</li>
+          <li>VITE_SUPABASE_ANON_KEY</li>
+        </ul>
+      </div>
     </form>
   );
 };
